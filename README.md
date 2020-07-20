@@ -7,12 +7,12 @@
 
 ## java
 
-[java学习](java_learning.md)
+[java学习](java/java_learning.md)
 
-[java学习路线](java_learning_path.md)
+[java学习路线](java/java_learning_path.md)
 
 ## coding
 [力扣刷题](README.md)
 
 ## algorithm
-[算法学习](algorithm_learning.md)
+[算法学习](algorithm/algorithm_learning.md)
