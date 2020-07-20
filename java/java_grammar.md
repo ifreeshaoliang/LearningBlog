@@ -88,3 +88,38 @@ int nx = (int)Math.round(x);//round返回long类型，要强制转换一下
 enum Size { SMALL, MEDIUM, LARGE, EXTER_LARGE};
 Size s = Size.MEDIUM;
 ~~~
+
+**10. 字符串**
+
+java允许使用+号连接两个字符串，当一个字符串与一个非字符串的值进行拼接时，后者会转换位字符串。
+~~~
+String s1 = "helllo";
+String s2 = " java";
+int a = 250;
+String str = s1 + s2 + a; //str="hello java250"
+~~~
+String类没有提供用于修改字符串的方法，是不可变字符串。
+如果要修改当前字符串，则需要引用另外一个字符串。
+
+不可变字符串有个优点，编译器可以让字符串共享。共享的高效率胜于提取、拼接字符串带来的低效。
+
+如果经常要进行拼接，可以用“构建字符串”。
+
+~~~
+//检查字符串是否相等，用equals方法，不能用==
+if(s.equals(b))
+
+String s = "Hello";
+char ch = s.charAt(0);//获得某个字符
+int len = s.length();//获得长度
+~~~
+
+**11. 构建字符串**
+~~~~
+StringBuilder builder = new StringBuilder();
+builder.append(ch);//append a single character
+builder.append(str);//append a string
+
+String s = builder.toSting();//调用toString -> 字符串
+~~~~
+
