@@ -12,7 +12,7 @@
 [java学习路线](java/java_learning_path.md)
 
 ## coding
-[力扣刷题](README.md)
+[力扣刷题](leetcode/coding.md)
 
 ## algorithm
 [算法学习](algorithm/algorithm_learning.md)
