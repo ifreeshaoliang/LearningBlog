@@ -24,7 +24,7 @@ static double mySqrt_er_fen(int num){
 
 **2. 解法二：牛顿迭代法**
 
-![函数图像](https://i.loli.net/2020/10/06/3c4Htb5aohSAILX.png)
+![函数图像](https://s1.ax1x.com/2020/10/06/0Nco90.png)
 
 >设f(x)=x^2 - a，其中a是我们要开方的数。画出上图的抛物线，然后随机取一个点(x0，f(x0))，以这个点做切线，交x轴与x1。以同样的方法以点(x1，f(x1))处做切线，不断做切线逼近零点。最后就可以求得一个近似的结果了。
 
