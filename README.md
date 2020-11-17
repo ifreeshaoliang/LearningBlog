@@ -1,7 +1,7 @@
 # 学习日志
 >这是用于记录个人学习过程的一个blog。主要还是给自己看的。
 
-[总体的学习路线](java/java_learning_path.md)
+> [这是学习路线](java/java_learning_path.md)
 ## java
 
 [java语言学习](java/java_learning.md)
