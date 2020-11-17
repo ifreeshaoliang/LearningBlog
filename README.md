@@ -19,6 +19,11 @@
 
 ## 计算机网络
 [计算机网络](README.md)
+
+## 操作系统
+[操作系统知识](README.md)
+
+[linux 操作](README.md)
 ## 数据库
 [MySQL](MySQL/MySQL.md)
 
