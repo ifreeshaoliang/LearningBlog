@@ -3,7 +3,7 @@
 
 ## git
 
-[git的使用](git_usage.md)
+[git的使用](git/git_usage.md)
 
 ## java
 
