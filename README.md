@@ -32,7 +32,7 @@
 [MyBatis](README.md)
 
 ## 设计模式
-[设计模式](README.md)
+[常见设计模式](README.md)
 
 ## 项目管理工具
 [Maven](README.md)
@@ -41,6 +41,9 @@
 [Spring](README.md)
 
 [SpringMVC](README.md)
+
+## 中间件
+[kafka](README.md)
 
 ## 前端知识学习
 [Vue.js](README.md)
