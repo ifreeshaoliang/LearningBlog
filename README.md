@@ -7,9 +7,6 @@
 
 [java学习路线](java/java_learning_path.md)
 
-## 版本控制
-[git](git/git_usage.md)
-
 ## 数据库
 [MySQL](MySQL/MySQL.md)
 
@@ -19,3 +16,6 @@
 [刷题](leetcode/coding.md)
 
 [算法](algorithm/algorithm_learning.md)
+
+## 版本控制
+[git](git/git_usage.md)
