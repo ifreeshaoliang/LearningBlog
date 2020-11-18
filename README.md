@@ -50,6 +50,8 @@
 
 [Element UI](README.md)
 
+## 反向代理
+[nginx](nginx/nginx_intro.md)
 ## 版本控制
 [git](git/git_usage.md)
 
