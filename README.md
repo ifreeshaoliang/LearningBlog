@@ -35,7 +35,7 @@
 [常见设计模式](README.md)
 
 ## 项目管理工具
-[Maven](README.md)
+[Maven](maven/maven.md)
 
 ## Spring全家桶
 [Spring](README.md)
