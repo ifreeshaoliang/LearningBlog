@@ -15,7 +15,7 @@
 ## 算法学习
 [刷题](leetcode/coding.md)
 
-[算法](algorithm/algorithm_learning.md)
+[算法](algorithm/algorithm.md)
 
 ## 计算机网络
 [计算机网络](README.md)
@@ -27,7 +27,7 @@
 ## 数据库
 [MySQL](MySQL/MySQL.md)
 
-[redis](redis/readME.md)
+[redis](redis/redis.md)
 
 [MyBatis](README.md)
 
@@ -51,7 +51,7 @@
 [Element UI](README.md)
 
 ## 反向代理
-[nginx](nginx/nginx_intro.md)
+[nginx](nginx/nginx.md)
 ## 版本控制
 [git](git/git_usage.md)
 
