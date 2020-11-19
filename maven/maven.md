@@ -29,18 +29,66 @@ ps：默认maven已经安装了
 7. 部署，把程序安装好，可执行。
 
 ### maven核心概念
-1. POM
-2. 约定的目录结构
-3. 坐标
-4. 依赖管理
-5. 仓库管理
-6. 生命周期
-7. 插件和目标
-8. 继承
-9. 聚合
+1. [POM](#POM)
+2. [约定的目录结构](#约定的目录结构)
+3. [坐标](#坐标)
+4. [依赖管理](#依赖管理)
+5. [仓库管理](#仓库管理)
+6. [生命周期](#生命周期)
+7. [插件和目标](#插件和目标)
+8. [继承](#继承)
+9. [聚合](#聚合)
 
 #### POM
 POM即project object model，项目对象模型。
+
+```
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+            http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 基本配置 -->
+    <groupId>...</groupId>
+    <artifactId>...</artifactId>
+    <version>...</version>
+    <packaging>...</packaging>
+
+
+    <!-- 依赖配置 -->
+    <dependencies>...</dependencies>
+    <parent>...</parent>
+    <dependencyManagement>...</dependencyManagement>
+    <modules>...</modules>
+    <properties>...</properties>
+
+    <!-- 构建配置 -->
+    <build>...</build>
+    <reporting>...</reporting>
+
+    <!-- 项目信息 -->
+    <name>...</name>
+    <description>...</description>
+    <url>...</url>
+    <inceptionYear>...</inceptionYear>
+    <licenses>...</licenses>
+    <organization>...</organization>
+    <developers>...</developers>
+    <contributors>...</contributors>
+
+    <!-- 环境设置 -->
+    <issueManagement>...</issueManagement>
+    <ciManagement>...</ciManagement>
+    <mailingLists>...</mailingLists>
+    <scm>...</scm>
+    <prerequisites>...</prerequisites>
+    <repositories>...</repositories>
+    <pluginRepositories>...</pluginRepositories>
+    <distributionManagement>...</distributionManagement>
+    <profiles>...</profiles>
+</project>
+```
 
 
 #### 约定的目录结构
@@ -54,6 +102,45 @@ idea中还会有个.iml文件，它是idae项目的标识文件。iml即infomati
 IDEA并不直接理解Maven模型，它将其转换为所有子系统使用的idea本身的项目模型，所以可以在IDEA中构建/运行/测试/部署/调试Maven项目，而无需使用Maven。它比直接读取Maven模型更快，更容易维护。
 
 #### 坐标
+~~~~
+<dependencies>
+    
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.11</version>
+        <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>5.1.9</version>
+    </dependency>
+
+
+</dependencies>
+~~~~
+
+在 dependencies 标签中，添加项目需要的 jar 所对应的 maven 坐标。
+
+* dependency：
+一个 dependency 标签表示一个坐标
+
+* groupId：
+团体、公司、组织机构等等的唯一标识。团体标识的约定是它以创建这个项目的组织名称的逆向域名（例如 org.javaboy）开头。一个 Maven 坐标必须要包含 groupId。一些典型的 groupId 如 apache 的 groupId 是 org.apache.
+
+* artifactId：
+相当于在一个组织中项目的唯一标识符。
+
+* version：
+一个项目的版本。一个项目的话，可能会有多个版本。如果是正在开发的项目，我们可以给版本号加上一个 SNAPSHOT，表示这是一个快照版（新建项目的默认版本号就是快照版）
+
+* scope：
+表示依赖范围。
+![](../imges/mavenDependentRange.png)
+
+找依赖要用到jar包，用 mvnrepository.com，下载到本地仓库。
 
 #### 依赖管理
 
@@ -66,4 +153,3 @@ IDEA并不直接理解Maven模型，它将其转换为所有子系统使用的id
 #### 继承
 
 #### 聚合
-
