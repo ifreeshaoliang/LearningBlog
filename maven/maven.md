@@ -147,6 +147,45 @@ IDEA并不直接理解Maven模型，它将其转换为所有子系统使用的id
 #### 仓库管理
 
 #### 生命周期
+Maven生命周期定义了各个构建环节的执行顺序，有了这个清单，Maven就可以自动化执行构建命令了。
+
+Maven有三套相互独立的生命周期，分别是
+1. Clean Lifecycle 在进行真正的构建之前进行一些清理工作
+2. Default Lifecycle: 构建的核心部分，包含 编译，测试，打包，安装和部署等。
+3. Site Lifecycle： 生成项目报告，站点，发布站点。
+
+>他们是相互独立的，你可以仅仅执行mvn clean来清理工作目录，仅仅调用mvn site来生成站点。也可以这样执行mvn clean install site运行所有这三套生命周期。
+
+```
+Clean生命周期一共包含三个阶段：
+1）pre-clean： 执行一些需要在clean之前完成的工作
+2）clean：移除所有上一次构建生成的文件
+3）post-clean: 执行一些需要在clean之后立刻完成的工作
+
+Default生命周期是Maven生命周期中最重要的一个，绝大部分工作都发生在这个生命周期中。
+这里只列出一部分重要和常用的阶段。
+1）validate
+   包含generate-sources和process-source两个动作，
+   也就是复制并处理资源文件，至目标目录，准备打包。
+2）compile 编译项目源码
+   包含process-class generate-test-sources 
+   generate-test-resources process-test-resources
+   复制并处理资源文件，至目标测试目录。
+3）test-compile：编译测试源代码
+   包含process-test-classes 和prepare-package
+4）package 接受编译好的代码，打包成jar或者war
+   包含pre-integration-test和integration-test和verify
+5）install 将包安装到本地仓库，以让其他项目依赖。
+6）deploy 将最终的包复制到远程的仓库，以让其他开发人员与项目共享或部署到服务器上运行。
+
+site的生命周期：
+1）pre-site：执行一些需要在生成站点文档之前完成的工作。
+2）site:生成项目的站点文档
+3）post-site：执行一些需要在生成站点文档之后完成的工作，为部署做准备
+4）site-deploy：将生成的站点文档部署到特定的服务器上。
+工作中可能经常用到的是site阶段和site-deploy阶段，用来生成和发布maven站点。
+这个功能相当强大，经理比较喜欢这个，文档和统计数据自动生成，很好看。
+```
 
 #### 插件和目标
 
