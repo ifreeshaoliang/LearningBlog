@@ -23,7 +23,7 @@
 ## 操作系统
 [操作系统知识](README.md)
 
-[linux 操作](README.md)
+[linux操作](README.md)
 ## 数据库
 [MySQL](MySQL/MySQL.md)
 
@@ -36,6 +36,12 @@
 
 ## 项目管理工具
 [Maven](maven/maven.md)
+
+## javaWeb学习
+[Servlet](README.md)
+
+[tomcat](README.md)
+
 
 ## Spring全家桶
 [Spring](README.md)
